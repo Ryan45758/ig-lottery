@@ -186,12 +186,14 @@
 
 19. 瀏覽器瀏覽就有網頁拉！但別急laravel還沒配置完成
 
-    `ig-lottery/www/ig_lottery/app/Http/Controllers/LotteryController.php`的第25行 'ig_username'、'ig_password'必須填成個人帳號的帳號及密碼。這樣就可以抽獎拉！
+    `ig-lottery/www/ig_lottery/app/Http/Controllers/LotteryController.php`的第29行 'ig_username'、'ig_password'必須填成個人帳號的帳號及密碼。這樣就可以抽獎拉！
+
+    ![](https://i.imgur.com/1ht6Tgq.png)
 
     此時你會發現抽獎出來的照片無法顯示。因為IG禁止跨域請求，必須要配置cloudflare worker，才可以。
 
     [CloudFlare IG Worker配置教學](https://gist.github.com/restyler/6c51e3ad20d7596e799d76e87cf93236)
-
+    
     配置完畢後，將第71行`'cloud flare worker url'.$value->getOwner()->getProfilePicUrl()`的'cloud flare worker url'內容改成worker的網址就可以瀏覽IG照片拉！
 
 #### Windows 10 :
